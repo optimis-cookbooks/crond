@@ -2,7 +2,7 @@
 
 include_recipe "crond::default"
 
-cron "mailchimp" do
+cron_d "mailchimp" do
   user "devel"
   path "/usr/local/rbenv/shims:/usr/local/bin:/usr/bin:/bin:$PATH"
   minute '30'

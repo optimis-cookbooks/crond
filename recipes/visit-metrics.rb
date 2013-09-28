@@ -1,6 +1,6 @@
 include_recipe 'crond::default'
 
-cron 'visit_metrics' do
+cron_d 'visit_metrics' do
   user 'devel'
   path '/usr/local/rbenv/shims:/usr/local/bin:/usr/bin:/bin:$PATH'
   minute '01'

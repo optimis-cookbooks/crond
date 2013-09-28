@@ -1,6 +1,6 @@
 include_recipe "crond::default"
 
-cron "RC WD Deploy" do
+cron_d "RC WD Deploy" do
   user "devel"
   path "/usr/local/bin:/usr/bin:/bin:$PATH"
   minute "0/5"

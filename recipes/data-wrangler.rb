@@ -2,7 +2,7 @@
 
 include_recipe "crond::default"
 
-cron "update_in_period" do
+cron_d "update_in_period" do
 
   user "devel"
   path "/usr/local/rbenv/shims:/usr/local/bin:/usr/bin:/bin:$PATH"
