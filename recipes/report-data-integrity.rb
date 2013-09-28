@@ -1,6 +1,6 @@
-# Web6
+# PT3
 
-include_recipe "cron::default"
+include_recipe "crond::default"
 
 env = node.chef_environment.downcase
 env = 'production' if env == 'prod'

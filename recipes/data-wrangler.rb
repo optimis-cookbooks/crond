@@ -1,6 +1,6 @@
 # DataWrangler Server
 
-include_recipe "cron::default"
+include_recipe "crond::default"
 
 cron "update_in_period" do
 

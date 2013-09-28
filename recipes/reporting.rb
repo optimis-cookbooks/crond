@@ -1,6 +1,6 @@
 # Reporting Server
 
-include_recipe "cron::default"
+include_recipe "crond::default"
 
 cron "mailchimp" do
   user "devel"

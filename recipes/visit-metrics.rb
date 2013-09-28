@@ -1,4 +1,4 @@
-include_recipe 'cron::default'
+include_recipe 'crond::default'
 
 cron 'visit_metrics' do
   user 'devel'

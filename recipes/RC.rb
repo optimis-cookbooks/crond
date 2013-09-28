@@ -1,4 +1,4 @@
-include_recipe "cron::default"
+include_recipe "crond::default"
 
 cron "RC WD Deploy" do
   user "devel"
