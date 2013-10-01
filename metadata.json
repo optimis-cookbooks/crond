@@ -13,7 +13,7 @@
   },
   "long_description": "= DESCRIPTION:\n\n= REQUIREMENTS:\n\n= ATTRIBUTES:\n\n= USAGE:\n\n",
   "description": "Installs/Configures cron",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "conflicting": {
   },
   "dependencies": {
