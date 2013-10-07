@@ -3,7 +3,6 @@
 include_recipe "crond::default"
 
 cron_d "update_in_period" do
-
   user "devel"
   path "/usr/local/rbenv/shims:/usr/local/bin:/usr/bin:/bin:$PATH"
   minute "01"
