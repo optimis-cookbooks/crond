@@ -2,6 +2,9 @@
 
 include_recipe "crond::default"
 
+env = node.chef_environment.downcase
+env = 'production' if env == 'prod'
+
 cron_d "check_id" do
   user "devel"
   path "/usr/local/rbenv/shims:/usr/local/bin:/usr/bin:/bin:$PATH"

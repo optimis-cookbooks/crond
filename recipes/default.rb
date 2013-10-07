@@ -8,6 +8,3 @@
 #
 
 include_recipe "cron"
-
-env = node.chef_environment.downcase
-env = 'production' if env == 'prod'
