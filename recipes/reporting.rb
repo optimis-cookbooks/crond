@@ -12,3 +12,11 @@ cron_d "mailchimp" do
   hour '1'
   command "cd /var/www/reporting;RAILS_ENV=#{env} bundle exec rake export:mailchimp:run"
 end
+
+cron_d "remove duplicated documents" do
+  user "devel"
+  path "/usr/local/rbenv/shims:/usr/local/bin:/usr/bin:/bin:$PATH"
+  minute '0'
+  hour '2'
+  command "cd /var/www/reporting;RAILS_ENV=#{env} bundle exec rake duplicates:remove"
+end
