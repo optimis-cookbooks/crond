@@ -20,3 +20,11 @@ cron_d "remove_duplicated_documents" do
   hour '2'
   command "cd /var/www/reporting;RAILS_ENV=#{env} bundle exec rake duplicates:remove"
 end
+
+cron_d "denormalizer_periodly_update" do
+  user "devel"
+  path "/usr/local/rbenv/shims:/usr/local/bin:/usr/bin:/bin:$PATH"
+  minute '0'
+  hour '2'
+  command "cd /var/www/reporting;RAILS_ENV=#{env} bundle exec rake db:denormalizer:periodly_update"
+end
