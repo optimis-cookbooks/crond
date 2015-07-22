@@ -13,13 +13,6 @@ cron_d "mailchimp" do
   command "cd /var/www/reporting;RAILS_ENV=#{env} bundle exec rake export:mailchimp:run"
 end
 
-cron_d "denormalizer_periodly_update" do
-  user "devel"
-  path "/usr/local/rbenv/shims:/usr/local/bin:/usr/bin:/bin:$PATH"
-  minute "*/20"
-  command "cd /var/www/reporting;RAILS_ENV=#{env} bundle exec rake db:denormalizer:periodly_update"
-end
-
 cron_d "data_transfer_check" do
   user "devel"
   path "/usr/local/rbenv/shims:/usr/local/bin:/usr/bin:/bin:$PATH"
